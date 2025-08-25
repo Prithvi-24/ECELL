@@ -33,7 +33,53 @@ body {
   object-fit: cover; /* fill screen without distortion */
   z-index: -1;       /* send behind text */
 }
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
 
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .about {
+    padding: 2rem 1rem;
+    font-size: 1rem;
+  }
+
+  .event-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .event-card {
+    width: 90%;
+    min-height: auto;
+  }
+
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .about h1, .about h2 {
+    font-size: 1.5rem;
+  }
+
+  .about p {
+    font-size: 0.9rem;
+  }
+}
 
 
 
@@ -205,3 +251,4 @@ body {
   color: white;
   box-shadow: 0 0 20px #ff4ffb;
 }
+

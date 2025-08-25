@@ -1,0 +1,207 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Fullscreen background video */
+.bg-video {
+  position: relative;   /* stay in background */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fill screen without distortion */
+  z-index: -1;       /* send behind text */
+}
+
+
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+ 
+  z-index: -1;
+}
+
+/* Hero text */
+.hero-text {
+  z-index: 1;
+  text-shadow: 0 0 15px cyan, 0 0 30px cyan;
+  animation: float 4s ease-in-out infinite;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #00e6ff;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 300;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Glow effect for About Section */
+.about {
+  background: #000; /* Dark background to enhance glow */
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* Outer glow */
+}
+
+.about h2, 
+.about h1 {
+  color: #00ffff; /* Neon cyan text */
+  text-shadow: 0 0 10px #00ffff,
+               0 0 20px #00ffff,
+               0 0 40px #00ffff; /* Glow effect */
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #fff;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+/* Optional animated glowing border */
+.about {
+  border: 2px solid #00ffff;
+  animation: glow-border 2s infinite alternate;
+}
+
+@keyframes glow-border {
+  from {
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  }
+  to {
+    box-shadow: 0 0 30px #00ffff, 0 0 60px #00ffff;
+  }
+}
+
+/* Events */
+.events {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.events h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ff4ffb;
+  text-shadow: 0 0 15px #ff4ffb;
+}
+
+.event-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.event-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 2rem;
+  border-radius: 15px;
+  width: 250px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+}
+
+.event-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 30px rgba(0,255,255,0.6);
+}
+
+/* Join Section */
+.join {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+}
+
+.join h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #00ffcc;
+}
+
+.join p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: #ddd;
+}
+.event-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 2rem;
+  border-radius: 15px;
+  width: 320px; /* wider to hold more info */
+  min-height: 350px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 20px rgba(0,255,255,0.3);
+  text-align: left; /* align details neatly */
+}
+
+.event-card p {
+  margin: 0.5rem 0;
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.event-card .btn {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.btn {
+  background: #00e6ff;
+  color: black;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #ff4ffb;
+  color: white;
+  box-shadow: 0 0 20px #ff4ffb;
+}
